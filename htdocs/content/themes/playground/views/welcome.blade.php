@@ -5,6 +5,6 @@
     
     <p>
         Contenu page themosis <br>
-        {{ get_option('th_comment')  }}
+        {{ get_option('th_accroche')  }}
     </p>
 @endsection

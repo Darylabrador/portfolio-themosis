@@ -17,7 +17,7 @@ class Realisation extends Hookable
     public function register()
     {
         PostType::make('realisations', 'Realisations', 'Realisation')
-        ->setTitlePlaceholder('Nom de la réalisation')
+        ->setTitlePlaceholder('Nom de la formation')
         ->setArguments([
             'public' => true,
             'has_archive' => true,
@@ -35,17 +35,6 @@ class Realisation extends Hookable
             ->add(Field::text('author'))
             ->add(Field::media('cover'))
             ->add(Field::integer('publication_year'))
-            ->add(Field::submit("yeah", $options = []))
             ->set();
-
-        $page = Page::make('walcome-page', 'Page accueil')->set();
-        $page->addSections([
-            new Section('general', 'General')
-        ]);
-        $page->addSettings([
-            'general'=>[
-                Field::editor('comment')
-            ]
-        ]);
     }
 }

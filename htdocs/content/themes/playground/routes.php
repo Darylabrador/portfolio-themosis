@@ -23,12 +23,18 @@ Route::get('singular', ['realisations', function ($post, $query) {
     return view('pages.realisation', compact('post', 'listTechnos'));
 }]);
 
+Route::get('singular', ['formations', function ($post, $query) {
+    return view('pages.formations', compact('post'));
+}]);
 
 // Arcage
 Route::any('postTypeArchive', ['realisations', function () {
     return view('blog.archive');
 }]);
 
+Route::any('postTypeArchive', ['formations', function () {
+    return view('blog.archive');
+}]);
 
 // filtre by Taxonomy
 
