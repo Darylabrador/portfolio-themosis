@@ -40,3 +40,18 @@ Installer les dépendances js de votre thème
 docker-compose exec webserver npm install -C /htdocs/content/themes
 ```
 
+
+### Flusher les routes :
+
+Il faut ajouter le fichier .htaccess dans /htdocs/cms avec le contenu suivant
+
+```shell
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+</IfModule>
+```

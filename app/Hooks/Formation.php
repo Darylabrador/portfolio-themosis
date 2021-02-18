@@ -22,7 +22,7 @@ class Formation extends Hookable
                 'has_archive' => true,
                 'menu_position' => 20,
                 "query_var" => false,
-                "rewrite" => false,
+                "rewrite" => true,
                 'supports' => ['title', 'editor'],
                 'menu_icon' => "dashicons-welcome-add-page",
             ])
