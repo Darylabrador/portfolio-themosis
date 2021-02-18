@@ -8,7 +8,7 @@
         <h3> Technologies </h3>
         <p>
           @foreach ($listTechnos as $item)
-              {{ $item->name }}  <br>
+              <a href="{{ get_term_link($item->slug, 'technologies') }}"> {{ $item->name }}  </a>
           @endforeach
         </p>
     </div>

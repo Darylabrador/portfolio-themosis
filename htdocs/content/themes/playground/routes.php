@@ -27,7 +27,7 @@ Route::get('singular', ['formations', function ($post, $query) {
     return view('pages.formations', compact('post'));
 }]);
 
-// Arcage
+// Arcade
 Route::any('postTypeArchive', ['realisations', function () {
     return view('blog.archive');
 }]);
@@ -36,8 +36,11 @@ Route::any('postTypeArchive', ['formations', function () {
     return view('blog.archive');
 }]);
 
-// filtre by Taxonomy
-
+// Taxonomy Routes
+Route::any('tax', ['technologies', function ($post, $query) {
+    $dataPost = $query->posts;
+    return view('pages.techno', compact('dataPost'));
+}]);
 
 // default route
 Route::fallback(function() {
