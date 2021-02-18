@@ -2,14 +2,17 @@
 
 @section('content')
     @if(have_posts())
-        <header class="page-header">
-            <h1 class="page-title">{!!  get_the_archive_title() !!}</h1>
-            <div class="archive-description">{!! get_the_archive_description() !!}</div>
-        </header>
-        @while(have_posts())
-        @php(the_post())
-            @template('parts.content', get_post_type())
-        @endwhile
+        @foreach ($dataPost as $item)
+            <header class="page-header">
+                <h1 class="page-title">{!!  $item->post_title !!}</h1>
+                <h3 class="page-title">{!!  $item->post_content !!}</h3>
+                <div class="archive-technos">
+                    @foreach (get_the_terms($item, 'technologies') as $techno)
+                        <a href="{{ get_term_link($techno->slug, 'technologies') }}"> {{ $techno->name }}  </a>
+                    @endforeach
+                </div>
+            </header>
+        @endforeach
         {!! get_the_posts_navigation() !!}
     @else
         @template('parts.content', 'none')

@@ -25,8 +25,9 @@ Route::get('singular', ['formations', function ($post, $query) {
 }]);
 
 // Arcade
-Route::any('postTypeArchive', ['realisations', function () {
-    return view('blog.archive');
+Route::any('postTypeArchive', ['realisations', function ($post, $query) {
+    $dataPost = $query->posts;
+    return view('blog.archive', compact('dataPost'));
 }]);
 
 Route::any('postTypeArchive', ['formations', function () {
@@ -44,11 +45,11 @@ Route::any('tax', ['technologies', function ($post, $query) {
 // route to qui-suis-je page
 Route::get('/qui-suis-je', function () {
     return view('pages.quisuisje');
-});
+})->name('quisuisje');
 
 
 // route to  contact page
-Route::get('/contact', [ContactController::class, 'contact']);
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 Route::post('/contact', [ContactController::class, 'sendMail']);
 
 
