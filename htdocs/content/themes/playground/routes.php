@@ -19,8 +19,19 @@ Route::any('template', ['qui-suis-je', function ($post, $query) {
 
 // route for PostType Realisation
 Route::get('singular', ['realisations', function ($post, $query) {
-    return view('pages.realisation', compact('post'));
+    $listTechnos = get_the_terms($post, 'technologies');
+    return view('pages.realisation', compact('post', 'listTechnos'));
 }]);
+
+
+// Arcage
+Route::any('postTypeArchive', ['realisations', function () {
+    return view('blog.archive');
+}]);
+
+
+// filtre by Taxonomy
+
 
 // default route
 Route::fallback(function() {

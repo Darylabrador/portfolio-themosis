@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
     @if(have_posts())
@@ -7,7 +7,7 @@
             <div class="archive-description">{!! get_the_archive_description() !!}</div>
         </header>
         @while(have_posts())
-            @php(the_post())
+        @php(the_post())
             @template('parts.content', get_post_type())
         @endwhile
         {!! get_the_posts_navigation() !!}
