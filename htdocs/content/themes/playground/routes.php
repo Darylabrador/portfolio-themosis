@@ -7,15 +7,12 @@
  * defined on the application global scope.
  */
 
+use App\Http\Controllers\ContactController;
+
 Route::get('/', function(){
     return view('welcome');
 })->name('home');
 
-
-// route for template qui-suis-je
-Route::any('template', ['qui-suis-je', function ($post, $query) {
-    return view('pages.quisuisje', compact('post'));
-}]);
 
 // route for PostType Realisation
 Route::get('singular', ['realisations', function ($post, $query) {
@@ -36,11 +33,24 @@ Route::any('postTypeArchive', ['formations', function () {
     return view('blog.archive');
 }]);
 
+
 // Taxonomy Routes
 Route::any('tax', ['technologies', function ($post, $query) {
     $dataPost = $query->posts;
-    return view('pages.techno', compact('dataPost'));
+    return view('pages.technologies', compact('dataPost'));
 }]);
+
+
+// route to qui-suis-je page
+Route::get('/qui-suis-je', function () {
+    return view('pages.quisuisje');
+});
+
+
+// route to  contact page
+Route::get('/contact', [ContactController::class, 'contact']);
+Route::post('/contact', [ContactController::class, 'sendMail']);
+
 
 // default route
 Route::fallback(function() {

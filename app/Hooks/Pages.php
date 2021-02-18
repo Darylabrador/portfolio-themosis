@@ -32,7 +32,7 @@ class Pages extends Hookable
 
 
         // Page qui suis je ?
-        $quisuisje = Page::make('quisuisje-page', 'Qui suis je ?')->set();
+        $quisuisje = Page::make('quisuisje', 'Qui suis je ?')->set();
         $quisuisje->addSections([
             new Section('presentation', 'Presentation'),
             new Section('objectifs', 'Objectifs')
@@ -48,7 +48,7 @@ class Pages extends Hookable
 
 
         // Page de contact
-        $contact = Page::make('contact-page', 'Contact')->set();
+        $contact = Page::make('contact', 'Contact')->set();
         $contact->addSections([
             new Section('contact', 'Contact'),
         ]);
