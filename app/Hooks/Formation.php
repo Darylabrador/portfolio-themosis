@@ -16,7 +16,7 @@ class Formation extends Hookable
     public function register()
     {
         PostType::make('formations', 'Formations', 'Formation')
-            ->setTitlePlaceholder('Nom de la réalisation')
+            ->setTitlePlaceholder('Nom de la formation')
             ->setArguments([
                 'public' => true,
                 'has_archive' => true,

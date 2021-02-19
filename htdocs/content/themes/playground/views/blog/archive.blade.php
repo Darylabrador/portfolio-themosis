@@ -4,12 +4,16 @@
     @if(have_posts())
         @foreach ($dataPost as $item)
             <header class="page-header">
-                <h1 class="page-title">{!!  $item->post_title !!}</h1>
+                <h1 class="page-title">
+                    <a href="/{{ $item->post_type }}/{{ $item->post_name }}"> {!!  $item->post_title !!} </a> 
+                </h1>
                 <h3 class="page-title">{!!  $item->post_content !!}</h3>
                 <div class="archive-technos">
-                    @foreach (get_the_terms($item, 'technologies') as $techno)
-                        <a href="{{ get_term_link($techno->slug, 'technologies') }}"> {{ $techno->name }}  </a>
-                    @endforeach
+                    @if (get_the_terms($item, 'technologies'))
+                        @foreach (get_the_terms($item, 'technologies') as $techno)
+                            <a href="{{ get_term_link($techno->slug, 'technologies') }}"> {{ $techno->name }}  </a>
+                        @endforeach
+                    @endif
                 </div>
             </header>
         @endforeach

@@ -17,7 +17,7 @@ class Realisation extends Hookable
     public function register()
     {
         PostType::make('realisations', 'Realisations', 'Realisation')
-        ->setTitlePlaceholder('Nom de la formation')
+        ->setTitlePlaceholder('Nom de la realisation')
         ->setArguments([
             'public' => true,
             'has_archive' => true,

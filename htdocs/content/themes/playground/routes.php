@@ -30,8 +30,9 @@ Route::any('postTypeArchive', ['realisations', function ($post, $query) {
     return view('blog.archive', compact('dataPost'));
 }]);
 
-Route::any('postTypeArchive', ['formations', function () {
-    return view('blog.archive');
+Route::any('postTypeArchive', ['formations', function ($post, $query) {
+    $dataPost = $query->posts;
+    return view('blog.archive', compact('dataPost'));
 }]);
 
 
