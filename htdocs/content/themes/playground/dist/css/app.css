@@ -1,3 +1,7 @@
+a:visited {
+  color: white !important;
+}
+
 .divider {
   width: 40%;
   height: 2px;

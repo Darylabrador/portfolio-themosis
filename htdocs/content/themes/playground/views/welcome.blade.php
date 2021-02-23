@@ -12,7 +12,7 @@
                     <div class="px-4 py-4 md:px-10">
                         {!! get_option('th_welcomecontent')  !!}
                         <div class="flex justify-center">
-                            <a href="{{ route('quisuisje') }}" class="bg-gray-600 text-white hover:bg-gray-500 hover:text-white px-3 py-2 rounded-full text-sm font-medium">Qui suis je  ? </a>
+                            <a href="{{ route('quisuisje') }}" class="bg-gray-600 text-white hover:bg-gray-500 hover:text-white px-3 py-2 rounded-full text-sm font-medium ">Qui suis je  ? </a>
                         </div>
                     </div>
                 </div>
