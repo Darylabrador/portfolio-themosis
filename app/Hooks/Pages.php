@@ -23,10 +23,8 @@ class Pages extends Hookable
         ]);
         $accueil->addSettings([
             'general' => [
-                Field::text('nom'),
-                Field::text('prenom'),
-                Field::text('titre'),
-                Field::editor('accroche')
+                Field::text('welcomemessage'),
+                Field::editor('welcomecontent')
             ]
         ]);
 
@@ -54,7 +52,7 @@ class Pages extends Hookable
         ]);
         $contact->addSettings([
             'contact' => [
-                Field::text('th_contactmessage'),
+                Field::text('contactmessage'),
             ],
         ]);
     }

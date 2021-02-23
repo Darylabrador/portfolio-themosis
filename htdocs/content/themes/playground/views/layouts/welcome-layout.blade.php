@@ -12,7 +12,6 @@
 <body>
     @include('layouts.menu')
     @yield('content')
-    @include('layouts.footer')
     @footer
 </body>
 </html>

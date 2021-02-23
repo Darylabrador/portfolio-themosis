@@ -1,0 +1,56 @@
+.divider {
+  width: 40%;
+  height: 2px;
+  background-color: black;
+}
+
+#identity {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: white !important;
+}
+
+#introd {
+  text-align: center;
+  font-size: 20px;
+  color: white !important;
+}
+
+@media (max-width: 575.98px) {
+  #welcome {
+    font-size: 21px;
+  }
+
+  .divider {
+    width: 80%;
+  }
+
+  #identity {
+    font-size: 18px;
+  }
+
+  #introd {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .divider {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+  .divider {
+    width: 60%;
+  }
+}
+
+@media (min-width: 994px) and (max-width: 1199.98px) {
+  .divider {
+    width: 60%;
+  }
+}
+
