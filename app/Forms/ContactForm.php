@@ -24,14 +24,13 @@ class ContactForm implements Formidable
             'flush' => false,
             'attributes' => [
                 'id'    => 'contact-form',
-                'class' => 'form-control'
             ]
         ])
         ->add($fields->text('identite', [
             'rules' => 'required',
             'label' => 'Qui êtes vous ?',
             'attributes' => [
-                'class' => 'custom-demo',
+                'class' => 'shadow-sm mb-4 mt-2 focus:ring-gray-500 focus:border-gray-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md',
                 'required'
             ],
             'messages' => [
@@ -42,7 +41,7 @@ class ContactForm implements Formidable
             'rules' => 'required|email',
             'label' => 'Votre adresse email',
             'attributes' => [
-                'class' => 'custom-demo',
+                'class' => 'shadow-sm mb-4 mt-2 focus:ring-gray-500 focus:border-gray-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md',
                 'required'
             ],
             'messages' => [
@@ -54,7 +53,7 @@ class ContactForm implements Formidable
             'rules' => 'required',
             'label' => 'Que voulez-vous me dire ?',
             'attributes' => [
-                'class' => 'custom-demo',
+                'class' => 'shadow-sm mb-4 mt-2 focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-sm border-gray-300 rounded-md',
                 'required'
             ],
             'messages' => [
@@ -64,7 +63,11 @@ class ContactForm implements Formidable
         ]))
         ->add($fields->submit('send', [
             'mapped' => false,
-            'label' => 'Contacter',
+            'label' => 'Envoyer',
+            'attributes' => [
+                "class" => "py-2 px-4 mt-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2",
+                "style" => "float: right; padding: 5px 35px; cursor: pointer;"
+            ]
         ]))
         ->get();
     }

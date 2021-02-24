@@ -49,6 +49,7 @@ class Pages extends Hookable
         ]);
         $contact->addSettings([
             'contact' => [
+                Field::text('contacttitle'),
                 Field::text('contactmessage'),
             ],
         ]);
