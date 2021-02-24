@@ -11,7 +11,9 @@
 </head>
 <body>
     @include('layouts.menu')
-    @yield('content')
+    <div style="min-height: 70vh;" class="flex align-center justify-center flex-col">
+        @yield('content')
+    </div>
     @footer
 </body>
 </html>

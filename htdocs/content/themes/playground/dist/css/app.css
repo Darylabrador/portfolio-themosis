@@ -23,7 +23,7 @@ a:visited {
 }
 
 @media (max-width: 575.98px) {
-  #welcome {
+  .titleSize {
     font-size: 21px;
   }
 
@@ -37,6 +37,12 @@ a:visited {
 
   #introd {
     font-size: 15px;
+  }
+
+  .textSize {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 15px;
   }
 }
 

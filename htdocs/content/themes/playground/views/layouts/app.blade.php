@@ -10,9 +10,20 @@
     @head
 </head>
 <body>
-    @include('layouts.menu')
-    @yield('content')
-    @include('layouts.footer')
+    <div class="flex flex-col h-screen">
+        <div>
+            @include('layouts.menu')
+        </div>
+        <div class="flex-grow">
+            @yield('content')
+        </div>
+        <div>
+            @include('layouts.footer')
+        </div>
+    </div>
+  
+    
+    
     @footer
 </body>
 </html>

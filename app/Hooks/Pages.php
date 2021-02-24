@@ -33,14 +33,11 @@ class Pages extends Hookable
         $quisuisje = Page::make('quisuisje', 'Qui suis je ?')->set();
         $quisuisje->addSections([
             new Section('presentation', 'Presentation'),
-            new Section('objectifs', 'Objectifs')
         ]);
         $quisuisje->addSettings([
             'presentation' => [
+                Field::text('whotitle'),
                 Field::editor('presentation')
-            ],
-            'objectifs' => [
-                Field::editor('objectifs')
             ]
         ]);
 
