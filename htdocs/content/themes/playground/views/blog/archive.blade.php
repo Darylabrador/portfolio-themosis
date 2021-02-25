@@ -15,14 +15,14 @@
                     @else
                     <article class="overflow-hidden rounded-lg shadow-lg bg-gray-700 h-80">
                     @endif
-                        <header class="flex items-center justify-center leading-tight p-2 md:p-4 bg-white h-4 m-1 rounded-lg">
+                        <header class="flex items-center justify-center leading-tight p-2 md:p-4 bg-white h-1/4 m-1 rounded-lg">
                             <h1 class="text-lg text-center">
                                 <a class="text-black hover:text-black visited:text-black focus:text-black font-bold" href="/{{ $item->post_type }}/{{ $item->post_name }}">
                                     {!!  ucfirst($item->post_title) !!}
                                 </a>
                             </h1>
                         </header>
-                        <footer class="flex flex-wrap h-5/6 content-end justify-center leading-none p-2 md:p-4">
+                        <footer class="flex flex-wrap h-4/6 content-end justify-center leading-none p-2 md:p-4">
                         @if (get_the_terms($item, 'technologies'))
                             @foreach (get_the_terms($item, 'technologies') as $techno)
                             <a href="{{ get_term_link($techno->slug, 'technologies') }}" class="rounded-full bg-gray-500 text-white mx-2 px-2 py-1 hover:bg-gray-900 hover:text-white visited:text-white focus:text-white"> {{ $techno->name }}  </a>
