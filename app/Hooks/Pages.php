@@ -51,6 +51,7 @@ class Pages extends Hookable
             'contact' => [
                 Field::text('contacttitle'),
                 Field::text('contactmessage'),
+                Field::text('contactimage'),
             ],
         ]);
     }
