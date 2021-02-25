@@ -26,20 +26,23 @@ Route::get('singular', ['formations', function ($post, $query) {
 
 // Arcade
 Route::any('postTypeArchive', ['realisations', function ($post, $query) {
+    $titlePostType = $query->query['post_type'];
     $dataPost = $query->posts;
-    return view('blog.archive', compact('dataPost'));
+    return view('blog.archive', compact('dataPost', 'titlePostType'));
 }]);
 
 Route::any('postTypeArchive', ['formations', function ($post, $query) {
+    $titlePostType = $query->query['post_type'];
     $dataPost = $query->posts;
-    return view('blog.archive', compact('dataPost'));
+    return view('blog.archive', compact('dataPost', 'titlePostType'));
 }]);
 
 
 // Taxonomy Routes
 Route::any('tax', ['technologies', function ($post, $query) {
+    $techno = $query->query['technologies'];
     $dataPost = $query->posts;
-    return view('pages.technologies', compact('dataPost'));
+    return view('pages.technologies', compact('dataPost', 'techno'));
 }]);
 
 
