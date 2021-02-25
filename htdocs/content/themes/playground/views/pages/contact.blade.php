@@ -11,7 +11,7 @@
         {!! $form->render() !!}
     </div>
 
-    <div class="lg:w-4/12 md:w-3/6 md:mr-6 hidden md:block">
+    <div class="lg:w-4/12 md:w-3/6 md:mr-6 hidden md:block mb-4">
         <img src="{{ get_option('th_contactimage') }}" alt="contact image" style="height: 100%;">
     </div>
 </div>

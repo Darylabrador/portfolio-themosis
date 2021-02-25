@@ -12,7 +12,7 @@
         @endforeach
     </div>
 
-    <div class="flex pl-4 justify-center flex-col content-center lg:justify-center lg:flex-row md:justify-center md:flex-row  xl:justify-center xl:flex-row 2xl:justify-center 2xl:flex-row">
+    <div class="flex pl-4 justify-center flex-col content-center lg:justify-center lg:flex-row md:justify-center md:flex-row  xl:justify-center xl:flex-row 2xl:justify-center 2xl:flex-row  mb-4">
         {!!  $post->post_content  !!}
     </div>
 
