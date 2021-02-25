@@ -10,15 +10,19 @@
             <div class="flex flex-wrap -mx-1 lg:-mx-4">
             @foreach ($dataPost as $item)
                 <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4">
-                    <article class="overflow-hidden rounded-lg shadow-lg bg-gray-700">
-                        <header class="flex items-center justify-center leading-tight p-2 md:p-4">
+                    @if (get_the_terms($item, 'technologies'))
+                    <article class="overflow-hidden rounded-lg shadow-lg bg-gray-700 h-80" style="background-image: url('{!! get_the_post_thumbnail_url (($item->ID), 'large') !!}'); background-size: cover;">
+                    @else
+                    <article class="overflow-hidden rounded-lg shadow-lg bg-gray-700 h-80">
+                    @endif
+                        <header class="flex items-center justify-center leading-tight p-2 md:p-4 bg-white h-4 m-1 rounded-lg">
                             <h1 class="text-lg text-center">
-                                <a class="text-white hover:text-white visited:text-white focus:text-white" href="/{{ $item->post_type }}/{{ $item->post_name }}">
+                                <a class="text-black hover:text-black visited:text-black focus:text-black font-bold" href="/{{ $item->post_type }}/{{ $item->post_name }}">
                                     {!!  ucfirst($item->post_title) !!}
                                 </a>
                             </h1>
                         </header>
-                        <footer class="flex flex-wrap items-center justify-center leading-none p-2 md:p-4">
+                        <footer class="flex flex-wrap h-5/6 content-end justify-center leading-none p-2 md:p-4">
                         @if (get_the_terms($item, 'technologies'))
                             @foreach (get_the_terms($item, 'technologies') as $techno)
                             <a href="{{ get_term_link($techno->slug, 'technologies') }}" class="rounded-full bg-gray-500 text-white mx-2 px-2 py-1 hover:bg-gray-900 hover:text-white visited:text-white focus:text-white"> {{ $techno->name }}  </a>

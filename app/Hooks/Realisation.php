@@ -24,7 +24,7 @@ class Realisation extends Hookable
             'menu_position' => 20,
             "query_var" => false,
             "rewrite" => true,
-            'supports' => ['title', 'editor'],
+            'supports' => ['title', 'editor', 'thumbnail'],
             'menu_icon' => "dashicons-welcome-add-page",
         ])
         ->set();
