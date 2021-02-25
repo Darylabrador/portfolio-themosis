@@ -7,7 +7,6 @@
                 <h1 class="page-title">
                     <a href="/{{ $item->post_type }}/{{ $item->post_name }}"> {!!  $item->post_title !!} </a> 
                 </h1>
-                <h3 class="page-title">{!!  $item->post_content !!}</h3>
                 <div class="archive-technos">
                     @if (get_the_terms($item, 'technologies'))
                         @foreach (get_the_terms($item, 'technologies') as $techno)
