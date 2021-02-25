@@ -26,10 +26,10 @@
         <div class="ml-3 relative">
             <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
-                    <a href="{{ route('quisuisje') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">A propos de moi</a>
-                    <a href="/formations" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">Mon parcours</a>
-                    <a href="/realisations" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">Mes réalisations</a>
-                    <a href="{{ route('contact') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">Me contacter</a>
+                    <a href="{{ route('quisuisje') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">A propos de moi</a>
+                    <a href="/formations" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">Mon parcours</a>
+                    <a href="/realisations" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">Mes réalisations</a>
+                    <a href="{{ route('contact') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">Me contacter</a>
                 </div>
             </div>
         </div>
@@ -39,10 +39,10 @@
 
   <div class="hidden z-50 bg-gray-800 absolute" id="mobile-menu" style="width: 100%;">
     <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
-      <a href="{{ route('quisuisje') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">A propos de moi</a>
-      <a href="/formations" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mon parcours</a>
-      <a href="/realisations" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mes réalisations</a>
-      <a href="{{ route('contact') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Me contacter</a>
+      <a href="{{ route('quisuisje') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">A propos de moi</a>
+      <a href="/formations" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">Mon parcours</a>
+      <a href="/realisations" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">Mes réalisations</a>
+      <a href="{{ route('contact') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white visited:text-white focus:text-white px-3 py-2 rounded-md text-sm font-medium ">Me contacter</a>
     </div>
   </div>
 </nav>
