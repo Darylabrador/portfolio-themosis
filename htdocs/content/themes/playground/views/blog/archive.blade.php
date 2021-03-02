@@ -11,7 +11,7 @@
             @foreach ($dataPost as $item)
                 <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4">
                     @if (get_the_terms($item, 'technologies'))
-                    <article class="overflow-hidden rounded-lg shadow-lg bg-gray-700 h-80" style="background-image: url('{!! get_the_post_thumbnail_url (($item->ID), 'large') !!}'); background-size: cover;">
+                    <article class="overflow-hidden rounded-lg shadow-lg bg-gray-700 h-80" style="background-image: url('{!! get_the_post_thumbnail_url (($item->ID), 'large') !!}'); background-size: cover; background-position:center;">
                     @else
                     <article class="overflow-hidden rounded-lg shadow-lg bg-gray-700 h-80">
                     @endif
