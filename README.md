@@ -21,7 +21,6 @@ docker-compose exec webserver npm install
 
 # création du thème
 docker-compose exec webserver php console theme:install playground  
-
 docker-compose exec webserver php console key:generate
 ```
 
@@ -43,7 +42,7 @@ docker-compose exec webserver npm install -C /htdocs/content/themes
 
 ### Flusher les routes :
 
-Il faut ajouter le fichier .htaccess dans /htdocs/cms avec le contenu suivant
+Il faut ajouter le fichier .htaccess dans /htdocs/cms avec le contenu suivant :
 
 ```shell
 <IfModule mod_rewrite.c>
@@ -55,3 +54,7 @@ Il faut ajouter le fichier .htaccess dans /htdocs/cms avec le contenu suivant
     RewriteRule . /index.php [L]
 </IfModule>
 ```
+
+### Ressources déploiement
+
+Vous pouvez retrouvez les <a href="#"> ressources de déploiement ici </a> !
